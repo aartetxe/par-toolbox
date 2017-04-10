@@ -6,7 +6,7 @@ DESCRIPTION = "Predictive Analytics for Readmission: a Toolbox in Python"
 KEYWORDS = "Predictive Data Analytics Readmission Toolbox"
 AUTHOR = "Arkaitz Artetxe"
 AUTHOR_EMAIL = "aartetxe@vicomtech.org"
-URL = "https://github.com/aartetxe/par-toolbox"
+URL = "XXX"
 
 setup(
     name=NAME,
