@@ -36,12 +36,12 @@ class PreProcessing:
 
     def set_los(self, col_admission, col_discharge, date_format="%d/%m/%Y"):
         """
-        This method calculates and
+        Creates a new column containing the length of stay (LOS) in days of each admission
 
         :param col_admission: column name of the hospital admission date
         :param col_discharge: column name of the hospital discharge date
         :param date_format: (optional) format of the date, default='%d/%m/%Y'
-        :return: the dataframe with an additional column named 'LOS' containing the LOS in days
+        :return: Self
         """
 
         for i, row in self.df.iterrows():
