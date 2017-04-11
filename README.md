@@ -21,9 +21,11 @@ par-toolbox is tested to work under python 2.7
 Installation
 ------------
 
-Run the following from your module directory
+Run the following commands:
 
-    $ pip install
+    $ git clone https://github.com/aartetxe/par-toolbox.git
+    $ cd par-toolbox
+    $ pip install .
 
 Getting started
 ---------------
