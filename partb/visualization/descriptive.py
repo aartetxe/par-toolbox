@@ -3,6 +3,7 @@ from sklearn.decomposition import PCA
 import seaborn as sn
 import matplotlib.pyplot as plt
 from collections import OrderedDict
+from mpl_toolkits.mplot3d import Axes3D
 
 
 def histogram_plot(df, feature, target):
@@ -18,7 +19,7 @@ def histogram_plot(df, feature, target):
     x1 = list(df[df[target] == 0][feature].values)
     x2 = list(df[df[target] == 1][feature].values)
 
-    plt.figure() # TODO: Revise and remove if necessary
+    plt.figure()  # TODO: Revise and remove if necessary
 
     plt.hist(x1, 10, stacked=True, normed=False)
     plt.hist(x2, 10, stacked=True, normed=False)
@@ -106,3 +107,32 @@ def scatter_pca(dataset, target):
     return plt.figure()
 
 
+def scatter_pca(dataset, target):
+    colors = ['#A5E500', '#3500BF']
+    # Convert to matrices
+    X = dataset.as_matrix()
+    y = target.as_matrix().astype(int)
+
+    y_color = map(lambda x: colors[x], y)
+
+    # Principal Component Analysis
+    pca = PCA(n_components=2)
+    X_pca = pca.fit(X).transform(X)
+
+    # Plot figure
+    fig = plt.figure(1, figsize=(5, 5))
+    plt.clf()
+    ax = Axes3D(fig, rect=[0, 0, .95, 1], elev=48, azim=134)
+
+    plt.cla()
+    pca = PCA(n_components=3)
+    pca.fit(X)
+    X = pca.transform(X)
+
+    ax.scatter(X[:, 0], X[:, 1], X[:, 2], c=y_color, cmap=plt.cm.spectral)
+
+    plt.title('Scatter PCA 3D')
+    plt.legend()
+    plt.show()
+
+    return plt.figure()
