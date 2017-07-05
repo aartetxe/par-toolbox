@@ -107,7 +107,7 @@ def scatter_pca(dataset, target):
     return plt.figure()
 
 
-def scatter_pca(dataset, target):
+def scatter_pca_3d(dataset, target):
     colors = ['#A5E500', '#3500BF']
     # Convert to matrices
     X = dataset.as_matrix()
@@ -116,7 +116,7 @@ def scatter_pca(dataset, target):
     y_color = map(lambda x: colors[x], y)
 
     # Principal Component Analysis
-    pca = PCA(n_components=2)
+    pca = PCA(n_components=3)
     X_pca = pca.fit(X).transform(X)
 
     # Plot figure
