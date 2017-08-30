@@ -1,14 +1,14 @@
 READMISSION DATA
-================
+=================
 
 This fictional dataset contains patient information of 195 dummy patients.
 Each instance (patient) contains 17 features and a binary target label that
 encodes whether the patient was readmitted within 30 days after discharge from hospital.
 
-Contains missing data.
+NOTE: Contains missing data.
 
 Attributes:
------------
+------------
 
 | Feature             | Description                                                                      |
 |---------------------|----------------------------------------------------------------------------------|
