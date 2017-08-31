@@ -5,8 +5,9 @@ This section contains some Jupyter notebooks that aim to show the most relevant 
 
 General example:
 -----------
-This example covers some of the core functionalities of the toolbox.
-Outline
+[This example](general.ipynb) covers some of the core functionalities of the toolbox.
+
+Outline:
 1. Load a test dataset
 2. Preliminary analysis
    1. Show summary
