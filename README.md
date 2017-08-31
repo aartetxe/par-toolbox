@@ -3,8 +3,12 @@ Predictive Analytics for Readmission: a Toolbox in Python
 
 Introduction
 ------------
-PAR-Toolbox is a open source toolbox for the analysis of hospital readmission data based on machine learning techniques.
+PAR-Toolbox is an open source toolbox for the analysis of hospital readmission data based on machine learning techniques.
 The toolbox includes a synthetic [dataset](/data) for testing purposes, which has been generated in accordance with real healthcare datasets.
+
+Features
+--------
+TODO: Description of the features
 
 Dependencies
 ------------
