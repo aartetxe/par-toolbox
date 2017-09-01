@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 from datetime import datetime
 
 
@@ -27,7 +28,7 @@ class PreProcessing:
         """
 
         if pd.isnull(date_admission) or pd.isnull(date_discharge):
-            return "NaN"
+            return np.NaN
         else:
             d0 = datetime.strptime(date_admission, date_format)
             d1 = datetime.strptime(date_discharge, date_format)
@@ -47,7 +48,7 @@ class PreProcessing:
         """
 
         if pd.isnull(date_first_diagnostic) or pd.isnull(date_admission):
-            return "NaN"
+            return np.NaN
         else:
             d0 = datetime.strptime(date_first_diagnostic, date_format)
             d1 = datetime.strptime(date_admission, date_format)
@@ -67,7 +68,7 @@ class PreProcessing:
         """
 
         if pd.isnull(day_of_birth) or pd.isnull(date_admission):
-            return "NaN"
+            return np.NaN
         else:
             d0 = datetime.strptime(day_of_birth, date_format)
             d1 = datetime.strptime(date_admission, date_format)
