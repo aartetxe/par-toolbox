@@ -136,3 +136,27 @@ def scatter_pca_3d(dataset, target):
     plt.show()
 
     return plt.figure()
+
+
+def plot_rank(dataset, feature_importance):
+    """
+    Plots a horizontal bar with sorted feature importances
+    
+    :param dataset: Dataframe containing the dataset without the target variable
+    :param feature_importance: Array of (absolute) feature importances
+    :return: The figure created
+    """
+
+    feature_importance = 100.0 * (feature_importance / feature_importance.max())
+    sorted_idx = np.argsort(feature_importance)
+    varlabels = dataset.columns.values
+
+    plt.figure(figsize=(10, 10))
+
+    plt.barh(np.arange(len(varlabels)), feature_importance[sorted_idx], align='center', color='blue', ecolor='black')
+    plt.yticks(np.arange(len(varlabels)), varlabels[sorted_idx])
+
+    plt.xlabel('Relative importance')
+    plt.show()
+
+    return plt.figure()
