@@ -6,10 +6,6 @@ Introduction
 PAR-Toolbox is an open source toolbox for the analysis of hospital readmission data based on machine learning techniques.
 The toolbox includes a synthetic [dataset](/data) for testing purposes, which has been generated in accordance with real healthcare datasets.
 
-Features
---------
-TODO: Description of the features
-
 Dependencies
 ------------
 
@@ -34,6 +30,10 @@ Run the following commands:
 Getting started
 ---------------
 Refer to usage and examples included in [examples](/examples)
+
+Features
+--------
+TODO: Description of the features
 
 Documentation
 -------------
